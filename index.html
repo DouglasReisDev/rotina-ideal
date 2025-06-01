@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotina Ideal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <h1>✅Rotina Ideal📅</h1>
+  </header>
+  <nav>
+  <button onclick="mostrarAba('calendario')">Calendário</button>
+  <button onclick="mostrarAba('rotina')">Rotina</button>
+  <button onclick="mostrarAba('dieta')">Dieta</button>
+  <button onclick="mostrarAba('hidratacao')">Hidratação</button>
+  <a href="https://douglasreisdev.github.io/notas/" target="_blank">
+    <button>Notas</button>
+  </a>
+</nav>
+
+  <main>
+    <section id="calendario" class="aba ativa">
+      <div style="margin-bottom: 1rem;">
+        <label for="dataSelecionada">📅 Editar data:</label>
+        <input type="date" id="dataSelecionada" onchange="atualizarDataSelecionada()">
+      </div>
+      <div class="botoes-calendario">
+        <button onclick="mudarMes(-1)">← Mês Anterior</button>
+        <span id="mesAno"></span>
+        <button onclick="mudarMes(1)">Próximo Mês →</button>
+      </div>
+      <div id="dias" class="dias"></div>
+    </section>
+    <section id="rotina" class="aba"></section>
+    <section id="dieta" class="aba">
+      <h2>Checklist de Refeições</h2>
+      <div id="dietaLista"></div>
+    </section>
+    <section id="hidratacao" class="aba">
+      <h2>Controle de Hidratação</h2>
+      <div class="bloco">
+        <div class="contador" id="contadorAgua">0 L</div>
+        <div class="btns">
+          <button onclick="ajustarAgua(-1)">-</button>
+          <button onclick="ajustarAgua(1)">+</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    Desenvolvido por Douglas Reis - Versão 1.0
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

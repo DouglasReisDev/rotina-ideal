@@ -1,0 +1,184 @@
+
+:root {
+  --fundo: #0a0a1e;
+  --primaria: #102542;
+  --secundaria: #1b2a41;
+  --texto: #ffffff;
+  --destaque: #0077ff;
+  --concluido: #00c851;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--primaria);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+nav {
+  background-color: var(--secundaria);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+nav button {
+  background-color: var(--primaria);
+  color: var(--texto);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: var(--destaque);
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.aba {
+  display: none;
+}
+
+.aba.ativa {
+  display: block;
+}
+
+.bloco {
+  margin-bottom: 1rem;
+  background: var(--primaria);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 0.5rem;
+}
+
+.contador {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btns button {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--destaque);
+  color: white;
+  cursor: pointer;
+}
+
+.botoes-calendario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.botoes-calendario button {
+  background-color: var(--destaque);
+  color: var(--texto);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botoes-calendario button:hover {
+  background-color: #005ec4;
+}
+
+.botoes-calendario span#mesAno {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#calendario {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dias {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dia {
+  background: var(--primaria);
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.dia span {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  color: var(--concluido);
+}
+
+footer {
+  background-color: var(--secundaria);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+ input[type="date"] {
+  background-color: var(--primaria);
+  color: var(--texto);
+  border: 1px solid var(--destaque);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 200px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input[type="date"]:hover,
+input[type="date"]:focus {
+  border-color: #3399ff;
+}
