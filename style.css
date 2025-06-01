@@ -181,4 +181,23 @@ footer {
 input[type="date"]:hover,
 input[type="date"]:focus {
   border-color: #3399ff;
+} 
+
+@media (max-width: 480px) {
+  .botoes-calendario {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .botoes-calendario button {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  .botoes-calendario span#mesAno {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
 }
