@@ -183,7 +183,13 @@ input[type="date"]:focus {
   border-color: #3399ff;
 } 
 
+
+
+
 @media (max-width: 480px) {
+  
+  
+  
   body {
     overflow-x: hidden;
   }
@@ -252,4 +258,10 @@ nav button, nav a button {
   white-space: normal;
   word-break: break-word;
   max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .dias {
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  }
 }
